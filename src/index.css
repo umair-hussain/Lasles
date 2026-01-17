@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* =========================
+   THEME (Tailwind v4)
+========================= */
+@theme {
+  --color-primary: #F53838;
+  --color-secondary: #0B132A;
+  --color-p: #4F5665;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+@layer base {
+  * {
+    font-family: "Rubik", sans-serif;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes logoSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* =========================
+   UTILITIES
+========================= */
+@layer utilities {
+  .float {
+    animation: floatY 3.5s ease-in-out infinite;
+  }
+
+  .logo-wrap {
+    height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-wrap img {
+    height: 32px;
+  }
+
+  .logo-wrap.amazon img {
+    transform: scale(1.25);
+  }
+
+  .animate-logo-slide {
+    animation: logoSlide 30s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-logo-slide:hover {
+    animation-play-state: paused;
+  }
+}
