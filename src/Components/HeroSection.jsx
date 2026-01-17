@@ -35,10 +35,10 @@ const HeroSection = () => {
 
           {/* Right */}
           <div className="w-full relative md:w-[50%]">
-            <img src="/Illustration 2.png" alt="illustration" />
+            <img src="/Illustration2.png" alt="illustration" />
 
             <div className="absolute top-0 float">
-              <img src="/lock.svg" className="w-15 md:w-full" />
+              <img src="/Lasles/lock.svg" className="w-15 md:w-full" />
             </div>
 
             <div className="absolute top-20 left-5 float md:top-28 md:left-16">
